@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+    /* background-color: white; */
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 100vh;
+    margin-left: 10vw;
+    overflow: hidden;
+    background-image: url(../images/DCA-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: cover; */
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+}
+.main{
+    width: 50vh;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+h1{
+    font-size: 3vh;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+}
+input{
+    width: 46vh;
+    height: 5vh;
+    border-radius: 1vh;
+    text-align: center;
+    padding-left: 2vh;
+    border: none;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    outline: 1px solid white;
+    color: white;
+}
+button{
+    width: 46vh;
+    height: 6vh;
+    border: 1px solid #0e284f;
+    background-color: #0e284f;
+    color: white;
+    border-radius: 1vh;
+    transition: all .6s ease;
+}
+button:hover{
+    background-color: white;
+    color: #0e284f;
+}
+.middle{
+    width: 80vw;
+    height: 10vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+.middle img{
+    height: 10vh;
+    /* margin-left: 50vw;  */
+}
+.middle h1{
+    font-size: medium;
+    margin-right: 5vw;
+}
+.error{
+    min-width: 15vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 7vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 1vw;
+    position: absolute;
+    top: -7vh;
+    left: 42.5vw;
+    background-color: white;
+    border: 1px solid black;
+}
+@keyframes slide-down{
+    0%{
+        transform: translateY(-100%);
+    }
+    25%{
+        transform: translateY(100%);
+    }
+    75%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+@media screen and (max-width: 768px) {
+    h1{
+        font-size: 3vw;
+    }
+}

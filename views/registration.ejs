@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sign Up</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link href="/signup.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container"> 
+            <div class="left">
+                <h1>DotConnectAfrica Group Portal</h1>
+                <p> Seamlessly manage services and privileges on our portal for unparalleled control and convenience in your work journey.</p>
+                <img src="/DCA-logo.png" alt="image">
+            </div>
+            <div class="middle">
+                <img src="/DCA-logo.png" alt="">
+                <h1>DotConnectAfrica</h1>
+            </div> 
+            <div class="error" id="error-message">
+                
+            </div>
+            <form action="/register" class="right" method="post">
+                <h1>Register an Account</h1>
+                <div class="input">
+                    <h3>USERNAME</h3>
+                    <input type="text" placeholder="&#xF007;  Enter Your Username" id="username" name="username" style="font-family:Arial, FontAwesome" required>
+                </div>
+                <div class="input">
+                    <h3>EMAIL ADDRESS</h3>
+                    <input type="email" placeholder="&#xF0e0;  Enter Your Email" id="email" name="email" style="font-family:Arial, FontAwesome" required>
+                </div>
+                <div class="input">
+                    <h3>PASSWORD</h3>
+                    <input type="password" placeholder="&#xF023;  Enter Your Password" id="password" name="password" style="font-family:Arial, FontAwesome;" required>
+                </div>
+                <div class="input">
+                    <h3>CONFIRM PASSWORD</h3>
+                    <input type="password" placeholder="&#xF023;  Confirm Password" id="confirm" name="confirm" style="font-family:Arial, FontAwesome" required>
+                </div>
+                <div id="google-container">
+                    <button type="submit">SIGN UP</button>
+                </div>
+                <p>Already registered?<a href="/">  Log in</a></p>
+                <img class="right-img" src="/undraw_mobile_encryption_re_yw3o 2.png" alt="image">
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Log In</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="/login.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>DotConnectAfrica Group Portal</h1>
+            <p>Seamlessly manage services and privileges on our portal for unparalleled control and convenience in your work journey.</p>
+            <img src="/DCA-logo.png" alt="image">
+        </div>
+        <div class="middle">
+            <img src="/DCA-logo.png" alt="">
+            <h1>DotConnectAfrica</h1>
+        </div>
+        <form action="/login" class="right">
+            <h1>Login to your account</h1>
+            <div class="input">
+                <h3>EMAIL ADDRESS</h3>
+                <input type="text" placeholder="&#xF0e0; Enter Your Email" id="Email" name="Email" style="font-family:Arial, FontAwesome" required>
+            </div>
+            <div class="input">
+                <h3>PASSWORD</h3>
+                <input type="hidden" id="logTime" name="time">
+                <input type="password" placeholder="&#xF023; Enter Your Password" id="Password" name="Password" style="font-family:Arial, FontAwesome;" required>
+            </div>
+            <button type="submit" class="submit-button">LOGIN</button>
+            <!-- <a href="google-login.php"><img src="Images/google.png" alt=""></a> -->
+            <p>New here?<a href="/register">Register</a></p>
+            <p>Forgot password?<a href="/forgot">Reset</a></p>
+            <img class="right-img" src="/undraw_mobile_encryption_re_yw3o 2.png" alt="image">
+        </form>
+    </div>
+</body>
+
+</html>
