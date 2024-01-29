@@ -22,9 +22,11 @@
                 <img src="/DCA-logo.png" alt="">
                 <h1>DotConnectAfrica</h1>
             </div> 
-            <div class="error" id="error-message">
-                
-            </div>
+            <% if (errorMessage) { %>
+                <div class="error-message">
+                    <%= errorMessage %>
+                </div>
+            <% } %>
             <form action="/register" class="right" method="post">
                 <h1>Register an Account</h1>
                 <div class="input">

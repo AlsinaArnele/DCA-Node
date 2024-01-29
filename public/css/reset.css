@@ -87,19 +87,18 @@ body{
     width: 40vh;
     text-align: start;
 }
-.error{
-    width: 15vw;
-    height: 7vh;
-    display: none;
+.error-message{
+    position: absolute;
+    color: black;
+    min-width: 15vw;
+    min-height: 7vh;
+    display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
-    font-size: 1vw;
-    position: absolute;
-    top: -7vh;
-    left: 42.5vw;
     background-color: white;
-    border: 1px solid black;
+    z-index: 1000;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 @keyframes slide-down{
     0%{

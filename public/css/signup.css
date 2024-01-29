@@ -152,22 +152,18 @@ input:focus{
 .middle{
     display: none;
 }
-.error{
+.error-message{
+    position: absolute;
+    color: black;
     min-width: 15vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    height: 7vh;
-    display: none;
+    min-height: 7vh;
+    display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
-    font-size: 1vw;
-    position: absolute;
-    top: -7vh;
-    left: 42.5vw;
     background-color: white;
-    border: 1px solid black;
     z-index: 1000;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 .forgot{
     margin-top: 1vh;

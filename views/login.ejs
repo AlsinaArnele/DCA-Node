@@ -24,16 +24,21 @@
             <img src="/DCA-logo.png" alt="">
             <h1>DotConnectAfrica</h1>
         </div>
-        <form action="/login" class="right">
+        <% if (errorMessage) { %>
+            <div class="error-message">
+                <%= errorMessage %>
+            </div>
+        <% } %>
+        <form action="/" class="right" method="post">
             <h1>Login to your account</h1>
             <div class="input">
                 <h3>EMAIL ADDRESS</h3>
-                <input type="text" placeholder="&#xF0e0; Enter Your Email" id="Email" name="Email" style="font-family:Arial, FontAwesome" required>
+                <input type="text" placeholder="&#xF0e0; Enter Your Email" id="Email" name="email" style="font-family:Arial, FontAwesome" required>
             </div>
             <div class="input">
                 <h3>PASSWORD</h3>
                 <input type="hidden" id="logTime" name="time">
-                <input type="password" placeholder="&#xF023; Enter Your Password" id="Password" name="Password" style="font-family:Arial, FontAwesome;" required>
+                <input type="password" placeholder="&#xF023; Enter Your Password" id="password" name="password" style="font-family:Arial, FontAwesome;" required>
             </div>
             <button type="submit" class="submit-button">LOGIN</button>
             <!-- <a href="google-login.php"><img src="Images/google.png" alt=""></a> -->
@@ -43,5 +48,4 @@
         </form>
     </div>
 </body>
-
 </html>

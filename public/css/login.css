@@ -161,22 +161,19 @@ input:focus{
 .middle{
     display: none;
 }
-.error{
-    min-width: 15vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    height: 7vh;
-    display: none;
-    align-items: center;
-    justify-content: center;
+.error-message{
+    position: absolute;
     color: black;
     font-size: 1vw;
-    position: absolute;
-    top: -7vh;
-    left: 42.5vw;
+    min-width: 15vw;
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: white;
-    border: 1px solid black;
     z-index: 1000;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 @keyframes zoom-in{
     0%{

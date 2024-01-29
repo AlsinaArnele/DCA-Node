@@ -94,7 +94,7 @@ nav a:hover{
     margin-top: -10vh;
     height: 40vh;
     width: 100%;
-    background-image: url(../Images/hero-bg.png);
+    background-image: url(/hero-bg.png);
     background-size: cover;
     z-index: -1;
     background-color: #F3F4FC;
