@@ -21,54 +21,127 @@
                 <button id="settings" onclick="displaySettings()"><span id="more" class="material-symbols-outlined" style="color: white;">settings</span></button>
             </div>
             <div id="settings-logout">
-                <a href="edit-account.php">Settings</a>
-                <form id="logout-form" action="actions/logout.php" method="POST">
+                <a href="/profile">Settings</a>
+                <form id="logout-form" action="/logout" method="POST">
                     <button type="submit" id="logout-button">Logout</button>
                 </form>
+                <script>
+                    function displaySettings(){
+                    var settings = document.getElementById('settings-logout');
+                    if(settings.style.display == 'flex'){
+                    settings.style.display = 'none';
+                    }
+                    else{
+                            settings.style.display = 'flex';
+                        }
+                }
+                </script>
             </div>
         </div>
     </nav>
     <section id="hero">
         <h1>DotConnectAfrica</h1>
     </section>
-
     <section id="services">
+        <!-- Slack Card -->
         <div class='cards'>
-            <img src='/slack.png' alt='slack'>
-            <div class='inner-card'>
-                <h1>DCA Slack</h1>
-                <p>Access this service.<br/></p>
-            </div>
-            <div class='button'><a href='' target='_blank' rel='noopener'>Visit</a></div>
+            <% services.forEach(service => { %>
+                <% if (service.slack === 1) { %>
+                    <div class='cards'>
+                        <img src='/slack.png' alt='slack'>
+                        <div class='inner-card'>
+                            <h1>DCA Slack</h1>
+                            <p>Connect on Slack</p>
+                        </div>
+                        <div class='button'><a href='' target='_blank' rel='noopener'>Visit</a></div>
+                    </div>
+                <% } else if (service.slack === 0) { %>
+                    <div class='cards'>
+                        <img src='/slack.png' alt='slack'>
+                        <div class='inner-card'>
+                            <h1>DCA Slack</h1>
+                            <p>Connect on Slack</p>
+                        </div>
+                        <div class='button'><a href='' target='_blank' rel='noopener'>Unauthorized</a></div>
+                    </div>
+                <% } %>
+            <% }) %>
         </div>
 
+        <!-- Leads Card -->
         <div class='cards'>
-            <img src='/leads.png' alt='leads'>
-            <div class='inner-card'>
-                <h1>DCA Leads</h1>
-                <p>Access this service.<br/></p>
-            </div>
-            <div class='button'><a href='' target='_blank' rel='noopener'>Visit</a></div>
+            <% services.forEach(service => { %>
+                <% if (service.leads === 1) { %>
+                    <div class='cards'>
+                        <img src='/leads.png' alt='leads'>
+                        <div class='inner-card'>
+                            <h1>DCA Leads</h1>
+                            <p>Connect on Leads</p>
+                        </div>
+                        <div class='button'><a href='' target='_blank' rel='noopener'>Visit</a></div>
+                    </div>
+                <% } else if (service.leads === 0) { %>
+                    <div class='cards'>
+                        <img src='/leads.png' alt='leads'>
+                        <div class='inner-card'>
+                            <h1>DCA Leads</h1>
+                            <p>Connect on Leads</p>
+                        </div>
+                        <div class='button'><a href='' target='_blank' rel='noopener'>Unauthorized</a></div>
+                    </div>
+                <% } %>
+            <% }) %>
         </div>
 
+        <!-- Hosting Card -->
         <div class='cards'>
-            <img src='/hosting.png' alt='hosting'>
-            <div class='inner-card'>
-                <h1>DCA Hosting</h1>
-                <p>Access this service.<br/></p>
-            </div>
-            <div class='button'><a href='' target='_blank' rel='noopener'>Visit</a></div>
+            <% services.forEach(service => { %>
+                <% if (service.hosting === 1) { %>
+                    <div class='cards'>
+                        <img src='/hosting.png' alt='hosting'>
+                        <div class='inner-card'>
+                            <h1>DCA Hosting</h1>
+                            <p>Connect on Hosting</p>
+                        </div>
+                        <div class='button'><a href='' target='_blank' rel='noopener'>Visit</a></div>
+                    </div>
+                <% } else if (service.hosting === 0) { %>
+                    <div class='cards'>
+                        <img src='/hosting.png' alt='hosting'>
+                        <div class='inner-card'>
+                            <h1>DCA Hosting</h1>
+                            <p>Connect on Hosting</p>
+                        </div>
+                        <div class='button'><a href='' target='_blank' rel='noopener'>Unauthorized</a></div>
+                    </div>
+                <% } %>
+            <% }) %>
         </div>
 
+        <!-- DCA Drive Card -->
         <div class='cards'>
-            <img src='/drive.png' alt='drive'>
-            <div class='inner-card'>
-                <h1>DCA Drive</h1>
-                <p>Access this service.<br/></p>
-            </div>
-            <div class='button'><a href='' target='_blank' rel='noopener'>Visit</a></div>
+            <% services.forEach(service => { %>
+                <% if (service.DCA_drive === 1) { %>
+                    <div class='cards'>
+                        <img src='/drive.png' alt='DCA Drive'>
+                        <div class='inner-card'>
+                            <h1>DCA Drive</h1>
+                            <p>Connect on DCA Drive</p>
+                        </div>
+                        <div class='button'><a href='' target='_blank' rel='noopener'>Visit</a></div>
+                    </div>
+                <% } else if (service.DCA_drive === 0) { %>
+                    <div class='cards'>
+                        <img src='/drive.png' alt='DCA Drive'>
+                        <div class='inner-card'>
+                            <h1>DCA Drive</h1>
+                            <p>Connect on DCA Drive</p>
+                        </div>
+                        <div class='button'><a href='' target='_blank' rel='noopener'>Unauthorized</a></div>
+                    </div>
+                <% } %>
+            <% }) %>
         </div>
-
         <div class='cards'>
             <img src='/trust.png' alt='services'>
             <div class='inner-card'>
@@ -81,7 +154,6 @@
                 <a href='https://digitalmarketing.yakocloud.com/' target='_blank' rel='noopener'>Web Forum</a>
             </div>
         </div>
-
         <div class='cards'>
             <img src='/DCA-services.png' alt='services'>
             <div class='inner-card'>

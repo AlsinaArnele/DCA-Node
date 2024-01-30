@@ -54,3 +54,45 @@
         </div>
     </body>
 </html>
+<script>
+    const passwordInput = document.getElementById('password');
+    const strengthMessageElement = document.getElementById('password-strength-message');
+    
+    passwordInput.addEventListener('keyup', checkPasswordStrength);
+    
+    function checkPasswordStrength() {
+      const passwordValue = passwordInput.value;
+      const passwordStrength = calculatePasswordStrength(passwordValue);
+      displayPasswordStrengthMessage(passwordStrength);
+    }
+    
+    function calculatePasswordStrength(password) {
+      const minLength = 8;
+      const minNumbers = 3;
+      const minSpecialChars = 1;
+    
+      const numberRegex = /\d/g;
+      const specialCharRegex = /[^A-Za-z0-9]/g;
+    
+      const hasMinLength = password.length >= minLength;
+      const hasMinNumbers = (password.match(numberRegex) || []).length >= minNumbers;
+      const hasMinSpecialChars = (password.match(specialCharRegex) || []).length >= minSpecialChars;
+    
+      if (hasMinLength && hasMinNumbers && hasMinSpecialChars) {
+        return "strong";
+      } else {
+        return "weak";
+      }
+    }
+    
+    function displayPasswordStrengthMessage(strength) {
+      if (strength === "strong") {
+        strengthMessageElement.textContent = " ";
+        strengthMessageElement.style.color = "green";
+      } else {
+        strengthMessageElement.textContent = "Password is weak! It should have at least 8 characters.";
+        strengthMessageElement.style.color = "red";
+        strengthMessageElement.style.fontSize = "2vh";
+      }
+    }
+    </script>
