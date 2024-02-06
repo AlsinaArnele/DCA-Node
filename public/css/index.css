@@ -246,7 +246,6 @@ nav img{
     justify-content: center;
     width: 25vw;
     height: 25vh;
-    border: 2px solid lightgray;
     transition: all .6s ease;
     background-color: white;
 }
